@@ -1,9 +1,13 @@
-<h1>Score</h1>
+  <div class="container">
+    <div class="card score-result">
+      <h1>Score</h1>
 
-<% if @score.positive? %>
-  <p>Your score: <%= @score %></p>
-<% else %>
-  <p>Error: <%= @error_message %></p>
-<% end %>
+      <% if @score.positive? %>
+        <p class="score-text">Your score: <%= @score %></p>
+      <% else %>
+        <p class="error-text">Error: <%= @error_message %></p>
+      <% end %>
 
-<%= link_to "Try Again", games_settings_path %>
+      <%= link_to "Try Again", games_settings_path, class: "try-again-link" %>
+    </div>
+  </div>

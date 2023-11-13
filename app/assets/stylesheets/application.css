@@ -13,3 +13,53 @@
  *= require_tree .
  *= require_self
  */
+/* app/assets/stylesheets/styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container-bla {
+  text-align: center;
+  margin: 10px auto;
+  width: 250px;
+}
+
+.card {
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1 {
+  color: #333;
+}
+
+.input-group {
+  margin-top: 15px;
+}
+
+.form-control {
+  width: 70%;
+}
+
+.btn-primary {
+  width: 30%;
+}
+
+/* Add styles for the randomly generated letters */
+.random-letters {
+  margin-top: 15px;
+}
+
+.random-letter-badge {
+  margin: 5px;
+  font-size: 18px;
+  padding: 10px;
+}

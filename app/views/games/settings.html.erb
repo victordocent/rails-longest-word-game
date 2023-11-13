@@ -1,12 +1,22 @@
-  <h1>Game Settings</h1>
+  <div class="container-bla">
+    <div class="card">
+      <h1>Game Settings</h1>
 
-  <p>Random Letters: <%= @letters %></p>
+      <p>Random Letters:</p>
 
-<form action="/scores/score" method="POST" data-turbo="false">
-    <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-    <%= hidden_field_tag :letters, @letters %>
-    <div class="input-group">
-      <input type="text" name="word" class="form-control">
-      <input type="submit" value="Play" class="btn btn-primary">
+      <div class="random-letters">
+        <% @letters.chars.each do |letter| %>
+          <span class="badge bg-primary random-letter-badge"><%= letter %></span>
+        <% end %>
+      </div>
+
+      <%= form_tag("/scores/score", method: "post", data: { turbo: 'false' }) do %>
+        <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+        <%= hidden_field_tag :letters, @letters %>
+        <div class="input-group">
+          <%= text_field_tag :word, nil, class: "form-control", placeholder: "Enter your word" %>
+          <%= submit_tag "Play", class: "btn btn-primary" %>
+        </div>
+      <% end %>
     </div>
-  </form>
+  </div>

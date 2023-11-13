@@ -1,0 +1,51 @@
+/* app/assets/stylesheets/game_result_styles.css */
+
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+
+}
+
+.card {
+  width: 300px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+h1 {
+  color: #333;
+}
+
+.score-result {
+  margin-top: 15px;
+  margin: 10px auto;
+  width: 250px;
+}
+
+.score-text {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.error-text {
+  color: red;
+  margin-bottom: 10px;
+}
+
+.try-again-link {
+  display: block;
+  text-decoration: none;
+  color: #fff;
+  background-color: #007bff;
+  padding: 10px;
+  border-radius: 5px;
+}
