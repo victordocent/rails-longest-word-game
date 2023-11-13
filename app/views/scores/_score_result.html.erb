@@ -1,0 +1,11 @@
+<%= turbo_stream.replace 'score_result' do %>
+  <h1>Score</h1>
+
+  <% if @score.positive? %>
+    <p>Your score: <%= @score %></p>
+  <% else %>
+    <p>Error: <%= @error_message %></p>
+  <% end %>
+
+  <%= link_to "Try Again", games_settings_path %>
+<% end %>
